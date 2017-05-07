@@ -1,0 +1,21 @@
+{
+	"globals": {
+		"name": "Paul Schaefer",
+		"tagline": "web designer and developer",
+		"introduction": "I'm a web designer and developer with a passion for clean & efficient websites.",
+		"githubURL": "https://github.com/pschfr/site",
+		"clientWork": {
+			"Kyle Plaskon": "http://www.kyleplaskon.com/",
+			"Jeffery Peterson": "http://jwpdigitalmedia.com/",
+			"First Baptist Church of Lytle, TX": "https://firstbaptistchurchoflytle.com/"
+		},
+		"githubProjects": {
+			"Iconic": "https://github.com/pschfr/iconic",
+			"LastFM.js": "https://github.com/pschfr/lastfm.js"
+		},
+		"chromeExtensions": {
+			"Start": "https://github.com/pschfr/start",
+			"rand-repo": "https://github.com/pschfr/rand-repo"
+		}
+	}
+}
