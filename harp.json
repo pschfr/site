@@ -11,7 +11,8 @@
 		},
 		"githubProjects": {
 			"Iconic": "https://github.com/pschfr/iconic",
-			"LastFM.js": "https://github.com/pschfr/lastfm.js"
+			"LastFM.js": "https://github.com/pschfr/lastfm.js",
+			"Even this site!": "https://github.com/pschfr/site"
 		},
 		"chromeExtensions": {
 			"Start": "https://github.com/pschfr/start",

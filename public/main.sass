@@ -1,16 +1,18 @@
 // Constants
 $sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
 $serif: 'Palatino Linotype', 'Georgia', serif
-$dark:  hsl(0, 0%, 10%)
-$light: hsl(0, 0%, 97%)
+$white: whitesmoke
+$main:  crimson
 
 // Bootstrap Overrides
 // https://getbootstrap.com/customize/#less-variables
 $font-family-sans-serif: $sans
 $font-family-serif: $serif
 $font-size-base: 18px
-$text-color: $dark
-$body-bg: $light
+
+$body-bg: $white
+$link-color: $main
+$hr-border: lighten($main, 45%)
 
 // Bootstrap Import
 @import 'sass/_bootstrap.scss'
@@ -19,3 +21,7 @@ $body-bg: $light
 header h1
 	font-family: $serif
 	font-style: italic
+
+::selection
+	background-color: $main
+	color: $white
