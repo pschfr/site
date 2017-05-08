@@ -1,0 +1,9 @@
+header
+	.row
+		.col-xs-12
+			if current.path[0] != "index"
+				h1 #{name} 
+					small #{tagline}
+			else
+				h1 #{name}
+				p.lead #{introduction}

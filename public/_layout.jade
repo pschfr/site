@@ -10,5 +10,5 @@ html(lang="en")
 		.container
 			.row
 				.col-xs-12
+					!= partial("_partials/header")
 					!= yield
-		script(src=(environment == "production" ? "/v2/js/app.js" : "/js/app.js"))

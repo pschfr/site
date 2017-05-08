@@ -1,8 +1,10 @@
 {
 	"scratch-your-own-itch": {
-		"title": "Scratch Your Own Itch"
+		"title": "Scratch Your Own Itch",
+		"date": "March 24, 2017"
 	},
 	"hello-world": {
-		"title": "Hello World!"
+		"title": "Hello World!",
+		"date": "November 28, 2016"
 	}
 }
