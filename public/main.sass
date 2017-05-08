@@ -1,27 +1,23 @@
-// Constants
-$sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
-$serif: 'Palatino Linotype', 'Georgia', serif
-$white: whitesmoke
-$main:  crimson
-
-// Bootstrap Overrides
-// https://getbootstrap.com/customize/#less-variables
-$font-family-sans-serif: $sans
-$font-family-serif: $serif
+// Bootstrap Overrides, see https://getbootstrap.com/customize/#less-variables
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+$font-family-serif: 'Palatino Linotype', 'Palatino', 'Georgia', serif
 $font-size-base: 18px
 
-$body-bg: $white
-$link-color: $main
-$hr-border: lighten($main, 45%)
+$link-color: crimson
+$hr-border: lighten($link-color, 45%)
 
 // Bootstrap Import
 @import 'sass/_bootstrap.scss'
 
 // My custom styles
+body
+	// Pattern from http://www.heropatterns.com/
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")
+
 header h1
-	font-family: $serif
+	font-family: $font-family-serif
 	font-style: italic
 
 ::selection
-	background-color: $main
-	color: $white
+	background-color: $link-color
+	color: white

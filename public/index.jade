@@ -1,16 +1,15 @@
+p I work for 
+	a(href="http://o2dca.com" target="_blank" rel="noreferrer noopener") O2 Digital Creative Agency, 
+	| in the lovely Pittsburgh, PA.
+p You can find me across the Internet on 
+	a(href="https://twitter.com/pschfr" target="_blank" rel="noreferrer noopener") Twitter, 
+	a(href="https://instagram.com/pschfr" target="_blank" rel="noreferrer noopener") Instagram, 
+	| and 
+	a(href="https://github.com/pschfr" target="_blank" rel="noreferrer noopener") GitHub. 
+p Want to get in touch for a project, or to say hi? Email me at 
+	a(href="mailto:paul@o2dca.com") paul@o2dca.com.
+hr
 .row
-	.col-xs-12
-		p I work for 
-			a(href="http://o2dca.com" target="_blank" rel="noreferrer noopener") O2 Digital Creative Agency, 
-			| in the lovely Pittsburgh, PA.
-		p You can find me across the Internet on 
-			a(href="https://twitter.com/pschfr" target="_blank" rel="noreferrer noopener") Twitter, 
-			a(href="https://instagram.com/pschfr" target="_blank" rel="noreferrer noopener") Instagram, 
-			| and 
-			a(href="https://github.com/pschfr" target="_blank" rel="noreferrer noopener") GitHub. 
-		p Want to get in touch for a project, or to say hi? Email me at 
-			a(href="mailto:paul@o2dca.com") paul@o2dca.com.
-		hr
 	.col-sm-4.col-xs-12
 		p.text-uppercase.text-muted Client Work
 		ul.list-unstyled
@@ -29,11 +28,10 @@
 			each url, name in chromeExtensions
 				li
 					a(href="#{url}" target="_blank" rel="noreferrer noopener") #{name}
-	.col-xs-12
-		hr
-		p.text-uppercase.text-muted Articles
-		ul.list-unstyled
-			each article, slug in public.articles._data
-				li
-					a(href=(environment == "production" ? "/v2/articles/#{slug}" : "/articles/#{slug}")) #{article.title} 
-					em.small.text-muted #{article.date}
+hr
+p.text-uppercase.text-muted Articles
+ul.list-unstyled
+	each article, slug in public.articles._data
+		li
+			a(href="/articles/#{slug}") #{article.title} 
+				em.small.text-muted #{article.date}
