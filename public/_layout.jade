@@ -7,8 +7,10 @@ html(lang="en")
 		meta(name="description" content="#{introduction}")
 		title #{name} &mdash; #{tagline}
 		link(rel="stylesheet" href=(environment == "production" ? "/v2/main.css" : "/main.css"))
-	body.container
-		.row
-			.col-xs-12
-				!= partial("_partials/header")
-				!= yield
+	body
+		.container
+			.row
+				.col-xs-12
+					!= partial("_partials/header")
+					!= yield
+		!= partial("_partials/footer")
