@@ -1,5 +1,13 @@
 footer
 	.container
-		hr
-		p.text-muted.small &copy; #{new Date().getFullYear()} #{name}.<br class="visible-xs-block"> View the source on 
-			a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
+		.row
+			.col-xs-12
+				hr
+			.col-sm-10.col-xs-12
+				p.text-muted.small &copy; #{new Date().getFullYear()} #{name}.<br class="visible-xs-block"> View the source on 
+					a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
+			.col-sm-2.col-xs-12.text-right
+				a(href="javascript:changeFontSize('down')") -
+				a(href="javascript:changeFontSize('reset')") /
+				a(href="javascript:changeFontSize('up')") +
+
