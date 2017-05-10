@@ -6,7 +6,7 @@ html(lang="en")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(name="description" content="#{introduction}")
 		title #{name} &mdash; #{tagline}
-		link(rel="stylesheet" href=(environment == "production" ? "/v2/main.css" : "/main.css"))
+		link(rel="stylesheet" href=(environment == "production" ? "/v2/css/main.css" : "/css/main.css"))
 	body
 		.container
 			.row
@@ -14,3 +14,4 @@ html(lang="en")
 					!= partial("_partials/header")
 					!= yield
 		!= partial("_partials/footer")
+		script(src=(environment == "production" ? "/v2/js/app.js" : "/js/app.js"))
