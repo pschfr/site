@@ -8,9 +8,9 @@ if localStorage.getItem('font-size')
 changeFontSize = (direction) ->
 	# do da maths
 	if direction == 'up'
-		body_size = body_size + 1
+		body_size = parseInt(body_size) + 1
 	else if direction == 'down'
-		body_size = body_size - 1
+		body_size = parseInt(body_size) - 1
 	else if direction == 'reset'
 		body_size = 17
 	# sets body font size
