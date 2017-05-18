@@ -1,0 +1,6 @@
+h1 Archive
+ul.list-unstyled
+	each article, slug in public.articles._data
+		li
+			a(href="/articles/#{slug}") #{article.title}<br class="visible-xs-block">
+			em.small.text-muted  #{article.date}

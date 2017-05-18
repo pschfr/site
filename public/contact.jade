@@ -1,0 +1,18 @@
+h2 Contact Me!
+p.lead Want to say hi, or do you have a project inquiry? You've came to the right place!
+form(action="https://paulmakesthe.net/v2/php/mailer.php" method="post")
+	.row
+		.col-sm-6.col-xs-12.form-group
+				label(for="name") Who are you?
+				input(type="text" class="form-control" name="name" placeholder="Frank Reynolds" required)
+		.col-sm-6.col-xs-12.form-group
+				label(for="email") What's your email?
+				input(type="email" class="form-control" name="email" placeholder="frank@paddyspub.com" required)
+		.col-xs-12
+			.form-group
+				label(for="message") What's up?
+				textarea(class="form-control" name="message" placeholder="Please make me a shiny, new website!" required)
+			input(type="submit" class="btn btn-default" value="Send")
+hr
+p You can also email me directly at 
+	a(href="mailto:paul@o2dca.com") paul@o2dca.com.

@@ -5,6 +5,7 @@ $font-size-base: 17px
 
 $link-color: rebeccapurple
 $hr-border: lighten($link-color, 45%)
+$input-border-focus: lighten($link-color, 25%)
 
 // Other variables
 $footer-height: 50px
@@ -13,19 +14,26 @@ $footer-height: 50px
 @import '_bootstrap.scss'
 
 // My custom styles
+// Necessary for sticky footer
 html
 	position: relative
 	min-height: 100%
 
 body
 	// Pattern from http://www.heropatterns.com/
-	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-opacity='0.1'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")
+	background: #fff url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-opacity='0.1'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E") fixed
 	margin-bottom: $footer-height
+
+a
+	text-decoration-skip: ink
+	&:visited // No idea why Bootstrap doesn't darken the visited color too
+		color: $link-hover-color
 
 header h1
 	font-family: $font-family-serif
 	font-style: italic
 
+// Sticky footer magic
 footer
 	position: absolute
 	bottom: 0
@@ -40,3 +48,13 @@ footer
 ::selection
 	background-color: $link-color
 	color: white
+
+// Mobile-only styles
+@media (max-width: 767px)
+	// Resets the font-weight on lead paragraphs for legibility
+	.lead
+		font-weight: normal
+		font-size: 1.25em
+	// Hides -/+ buttons
+	footer .text-right
+		display: none

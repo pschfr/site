@@ -11,9 +11,12 @@
 			"Sean M. Woods, Professional Culinarian": "https://seanmwoods.com/"
 		},
 		"githubProjects": {
-			"Iconic": "https://github.com/pschfr/iconic",
+			"Iconic": "https://paulmakesthe.net/iconic",
+			"Drinking Games": "https://paulmakesthe.net/drink",
+			"Watchlist": "https://paulmakesthe.net/watchlist",
 			"LastFM.js": "https://github.com/pschfr/lastfm.js",
-			"Even this site!": "https://github.com/pschfr/site"
+			"Also this site!": "https://github.com/pschfr/site",
+			"Many more on GitHub!": "https://github.com/pschfr"
 		},
 		"chromeExtensions": {
 			"Start": "https://github.com/pschfr/start",

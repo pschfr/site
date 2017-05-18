@@ -18,6 +18,7 @@ changeFontSize = (direction) ->
 	# save to localStorage
 	localStorage.setItem('font-size', body_size)
 
+# https://github.com/pschfr/LastFM.js
 lastFM_request = (username, API_key, number, elementID) ->
 	lastFMurl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + username + '&api_key=' + API_key + '&limit=' + number + '&format=json'
 	xmlhttp = new XMLHttpRequest()
@@ -25,8 +26,18 @@ lastFM_request = (username, API_key, number, elementID) ->
 	xmlhttp.onreadystatechange = () ->
 		if xmlhttp.readyState == 4 && xmlhttp.status == 200
 			track = JSON.parse(xmlhttp.responseText).recenttracks.track[0]
-			document.getElementById(elementID).innerHTML = '<a href="' + track.url + '" target="_blank" rel="noreferrer noopener" title="on album: ' + track.album['\#text'] + '">' + track.artist['\#text'] + ' &mdash; ' + track.name + '</a>'
+			document.getElementById(elementID).innerHTML = '<a href="' + track.url + '" target="_blank" rel="noreferrer noopener" title="on the album: ' + track.album['\#text'] + '">' + track.name + ' by ' + track.artist['\#text'] + '</a>.'
 		else
-			document.getElementById(elementID).innerHTML = 'Sorry, connection to Last.FM failed.'
+			document.getElementById(elementID).innerHTML = 'Nothing, apparently. It appears the connection to Last.fm failed. :('
 	xmlhttp.send(null)
-setInterval(lastFM_request('paul_r_schaefer', '0f680404e39c821cac34008cc4d803db', '5', 'currentlylistening'), 5000)
+
+# if on home page, make Last.fm request
+if window.location.pathname == '/'
+	setInterval(lastFM_request('paul_r_schaefer', '0f680404e39c821cac34008cc4d803db', '5', 'currentlylistening'), 5000)
+else if window.location.pathname.replace('/', '') == 'contact' # if contact page...
+	# Show thanks or error messages
+	if window.location.search.replace('?', '') == 'thanks'
+		document.getElementsByTagName('form')[0].style.display = 'none'
+		document.getElementsByTagName('form')[0].parentElement.appendChild(document.createElement('p')).innerHTML = 'Thanks for your message! I\'ll get back to you right away.<br/><br/>Go back <a href="/">home</a>, or read some <a href="/articles">articles</a>.'
+	else if window.location.search.replace('?', '') == 'error'
+		document.getElementsByTagName('form')[0].parentElement.appendChild(document.createElement('p')).innerHTML = 'It seems something went wrong. Please try sending your message again.'
