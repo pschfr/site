@@ -36,7 +36,7 @@ lastFM_request = (username, API_key, number, elementID) ->
 	xmlhttp.send(null)
 
 # if on home page, make Last.fm request
-if window.location.pathname == '/'
+if window.location.pathname.replace('/', '') == '' or window.location.pathname.replace('/', '') == 'v2/'
 	setInterval(lastFM_request('paul_r_schaefer', '0f680404e39c821cac34008cc4d803db', '5', 'currentlylistening'), 5000)
 else if window.location.pathname.replace('/', '') == 'contact' # if contact page...
 	# Show thanks or error messages

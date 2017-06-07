@@ -3,8 +3,8 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
 $font-family-serif: 'Palatino Linotype', 'Palatino', 'Georgia', serif
 $font-size-base: 17px
 
-$link-color: rebeccapurple
-$hr-border: lighten($link-color, 45%)
+$link-color: royalblue
+$hr-border: lighten($link-color, 33%)
 $input-border-focus: lighten($link-color, 25%)
 
 // Other variables
@@ -26,8 +26,8 @@ body
 
 a
 	text-decoration-skip: ink
-	&:visited // No idea why Bootstrap doesn't darken the visited color too
-		color: $link-hover-color
+	text-decoration: underline
+	text-decoration-color: $input-border-focus
 
 abbr
 	text-decoration: none
@@ -52,6 +52,7 @@ a:focus,
 .btn:focus,
 .btn:active:focus
 	outline-color: $link-color
+	text-decoration: none
 
 ::selection
 	background-color: $link-color
