@@ -29,6 +29,9 @@ a
 	&:visited // No idea why Bootstrap doesn't darken the visited color too
 		color: $link-hover-color
 
+abbr
+	text-decoration: none
+
 header h1
 	font-family: $font-family-serif
 	font-style: italic
@@ -44,6 +47,11 @@ footer
 		margin-bottom: ($line-height-computed / 2) + 1
 	p
 		margin-bottom: ($line-height-computed / 2) + 1
+
+a:focus,
+.btn:focus,
+.btn:active:focus
+	outline-color: $link-color
 
 ::selection
 	background-color: $link-color

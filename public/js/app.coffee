@@ -18,6 +18,10 @@ changeFontSize = (direction) ->
 	# save to localStorage
 	localStorage.setItem('font-size', body_size)
 
+# Scroll to top-left pixel
+toTop = () ->
+	window.scrollTo(0, 0)
+
 # https://github.com/pschfr/LastFM.js
 lastFM_request = (username, API_key, number, elementID) ->
 	lastFMurl = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + username + '&api_key=' + API_key + '&limit=' + number + '&format=json'

@@ -5,9 +5,11 @@ footer
 				hr
 			.col-sm-10.col-xs-12
 				p.text-muted.small &copy; #{new Date().getFullYear()} #{name}.<br class="visible-xs-block"> View the source on 
-					a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub.
+					a(href="#{githubURL}" target="_blank" rel="noreferrer noopener") GitHub,
+					|  or head back 
+					a(href="javascript:toTop()" title="Scroll to top") up.
 			.col-sm-2.col-xs-12.text-right
-				a(href="javascript:changeFontSize('down')") -
-				a(href="javascript:changeFontSize('reset')") /
-				a(href="javascript:changeFontSize('up')") +
+				a(href="javascript:changeFontSize('down')" title="Decrease font size") -
+				a(href="javascript:changeFontSize('reset')" title="Reset font size") /
+				a(href="javascript:changeFontSize('up')" title="Increase font size") +
 
