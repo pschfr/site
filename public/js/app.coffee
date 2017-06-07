@@ -32,7 +32,7 @@ lastFM_request = (username, API_key, number, elementID) ->
 			track = JSON.parse(xmlhttp.responseText).recenttracks.track[0]
 			document.getElementById(elementID).innerHTML = '<a href="' + track.url + '" target="_blank" rel="noreferrer noopener" title="on the album: ' + track.album['\#text'] + '">' + track.name + ' by ' + track.artist['\#text'] + '</a>.'
 		else
-			document.getElementById(elementID).innerHTML = 'Nothing, apparently. It appears the connection to Last.fm failed. :('
+			document.getElementById(elementID).innerHTML = 'nothing, apparently. It appears the connection to Last.fm failed. :('
 	xmlhttp.send(null)
 
 # if on home page, make Last.fm request
