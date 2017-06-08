@@ -18,8 +18,13 @@ changeFontSize = (direction) ->
 	# save to localStorage
 	localStorage.setItem('font-size', body_size)
 
-# Scroll to top-left pixel
 toTop = () ->
+	# Unfocuses the link tag
+	tempInput = document.createElement('input')
+	document.body.appendChild(tempInput)
+	tempInput.focus()
+	document.body.removeChild(tempInput)
+	# Scrolls to the top-left pixel
 	window.scrollTo(0, 0)
 
 # https://github.com/pschfr/LastFM.js
